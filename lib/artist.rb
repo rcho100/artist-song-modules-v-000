@@ -13,6 +13,7 @@ class Artist
   # def self.find_by_name(name)
   #   @@artists.detect{|a| a.name == name}
   # end
+  #this method has been refactored
 
   def initialize
     self.class.all << self
@@ -35,5 +36,7 @@ class Artist
   # def to_param
   #   name.downcase.gsub(' ', '-')
   # end
+  #this method has been refactored
+
 
 end
