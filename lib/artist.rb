@@ -16,6 +16,9 @@ class Artist
     super
     @songs = []
   end
+  #this method has been refactored and has the 'super' keyword to tell
+  #our `Artist`'s `.initialize` method to use the code in the `Memorable::InstanceMethods` module's `.initialize` method
+  #*and* also to use any additional code in the `Artist`'s `.initialize` method.
 
   def self.all
     @@artists
