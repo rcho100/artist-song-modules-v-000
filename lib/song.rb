@@ -1,7 +1,9 @@
 require 'pry'
 
 class Song
-  extend Memorable
+  extend Memorable::ClassMethods
+  include Memorable::InstanceMethods
+  
   extend Findable
   include Paramable
 
@@ -10,27 +12,25 @@ class Song
 
   @@songs = []
 
-  def initialize
-    self.class.all << self
+  # def initialize
+  #   self.class.all << self
+  # end
+  
+  def artist=(artist)
+    @artist = artist
   end
 
+  def self.all
+    @@songs
+  end
+  
   # def self.find_by_name(name)
   #   @@songs.detect{|a| a.name == name}
   # end
   #this method has been refactored
 
-
-  def artist=(artist)
-    @artist = artist
-  end
-
   # def to_param
   #   name.downcase.gsub(' ', '-')
   # end
   #this method has been refactored
-
-
-  def self.all
-    @@songs
-  end
 end
