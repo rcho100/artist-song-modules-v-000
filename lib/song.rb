@@ -12,10 +12,6 @@ class Song
 
   @@songs = []
 
-  # def initialize
-  #   self.class.all << self
-  # end
-
   def artist=(artist)
     @artist = artist
   end
@@ -23,6 +19,11 @@ class Song
   def self.all
     @@songs
   end
+
+  # def initialize
+  #   self.class.all << self
+  # end
+  #this method has been refactored
 
   # def self.find_by_name(name)
   #   @@songs.detect{|a| a.name == name}

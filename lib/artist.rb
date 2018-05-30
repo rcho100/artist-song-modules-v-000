@@ -42,6 +42,4 @@ class Artist
   #   name.downcase.gsub(' ', '-')
   # end
   #this method has been refactored
-
-
 end
